@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Campus Lost & Found</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Campus Lost & Found</h1>
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#report">Report Item</a>
+
+            <a href="#items">Find Items</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- HOME -->
+
+    <section id="home" class="hero">
+
+        <h2>Lost Something on Campus?</h2>
+
+        <p>
+            Report lost or found items and help them
+            reach their rightful owners.
+        </p>
+
+        <a href="#report" class="button">
+            Report an Item
+        </a>
+
+    </section>
+
+
+
+    <!-- REPORT ITEM -->
+
+    <section id="report" class="container">
+
+        <h2>Report Lost / Found Item</h2>
+
+
+        <form id="reportForm">
+
+
+            <label>Item Type</label>
+
+            <select id="itemType" required>
+
+                <option value="">
+                    Select
+                </option>
+
+                <option value="Lost">
+                    Lost
+                </option>
+
+                <option value="Found">
+                    Found
+                </option>
+
+            </select>
+
+
+
+            <label>Item Name</label>
+
+            <input
+                type="text"
+                id="itemName"
+                placeholder="Example: College ID Card"
+                required
+            >
+
+
+
+            <label>Category</label>
+
+            <select id="category" required>
+
+                <option value="">
+                    Select Category
+                </option>
+
+                <option value="ID Card">
+                    ID Card
+                </option>
+
+                <option value="Vehicle">
+                    Vehicle
+                </option>
+
+                <option value="Bag">
+                    Bag
+                </option>
+
+                <option value="Mobile">
+                    Mobile
+                </option>
+
+                <option value="Books">
+                    Books
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+
+            <label>Description</label>
+
+            <textarea
+                id="description"
+                placeholder="Describe the item"
+                required
+            ></textarea>
+
+
+
+            <label>Location</label>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Example: College Library"
+                required
+            >
+
+
+
+            <label>Date</label>
+
+            <input
+                type="date"
+                id="itemDate"
+                required
+            >
+
+
+
+            <label>Item Photo</label>
+
+            <input
+                type="file"
+                id="itemPhoto"
+                accept="image/*"
+            >
+
+
+
+            <button type="submit">
+                Submit Report
+            </button>
+
+
+        </form>
+
+
+        <p id="message"></p>
+
+    </section>
+
+
+
+    <!-- FIND ITEMS -->
+
+    <section id="items" class="container">
+
+        <h2>Find Items</h2>
+
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search item..."
+        >
+
+
+        <select id="filterType">
+
+            <option value="">
+                All Items
+            </option>
+
+            <option value="Lost">
+                Lost
+            </option>
+
+            <option value="Found">
+                Found
+            </option>
+
+        </select>
+
+
+
+        <select id="filterCategory">
+
+            <option value="">
+                All Categories
+            </option>
+
+            <option value="ID Card">
+                ID Card
+            </option>
+
+            <option value="Vehicle">
+                Vehicle
+            </option>
+
+            <option value="Bag">
+                Bag
+            </option>
+
+            <option value="Mobile">
+                Mobile
+            </option>
+
+            <option value="Books">
+                Books
+            </option>
+
+            <option value="Other">
+                Other
+            </option>
+
+        </select>
+
+
+
+        <div id="itemsContainer">
+
+            <p>
+                No items reported yet.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Campus Lost & Found © 2026
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

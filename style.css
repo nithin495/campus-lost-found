@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+
+/* HEADER */
+
+header {
+    background: #173b70;
+    color: white;
+
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* HERO */
+
+.hero {
+    background: #2563a6;
+    color: white;
+
+    text-align: center;
+
+    padding: 90px 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+.button {
+    display: inline-block;
+
+    background: white;
+    color: #173b70;
+
+    padding: 13px 25px;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #eeeeee;
+}
+
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 800px;
+
+    margin: 40px auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.container h2 {
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    color: #173b70;
+}
+
+
+/* FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+/* SUBMIT BUTTON */
+
+button {
+    margin-top: 25px;
+
+    padding: 13px;
+
+    background: #2563a6;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #173b70;
+}
+
+
+/* MESSAGE */
+
+#message {
+    text-align: center;
+
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    color: green;
+}
+
+
+/* ITEMS */
+
+#itemsContainer {
+    margin-top: 20px;
+}
+
+.item-card {
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    background: #fafafa;
+}
+
+.item-card h3 {
+    color: #173b70;
+
+    margin-bottom: 10px;
+}
+
+.item-card p {
+    margin: 6px 0;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #173b70;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 50px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .container {
+        width: 94%;
+    }
+    .item-photo {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.item-card {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+}
+}
+/* Find Items Section */
+
+#items {
+    margin-top: 30px;
+}
+
+#items h2 {
+    margin-bottom: 20px;
+}
+
+#searchInput,
+#filterType,
+#filterCategory {
+    padding: 12px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#searchInput {
+    width: 45%;
+}
+
+#filterType,
+#filterCategory {
+    width: 20%;
+}
+
+#searchInput:focus,
+#filterType:focus,
+#filterCategory:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.item-card {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-card h3 {
+    margin-top: 0;
+}
+
+.item-photo {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.item-card button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    #searchInput,
+    #filterType,
+    #filterCategory {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .item-photo {
+        width: 100%;
+        height: auto;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 80px;
+}

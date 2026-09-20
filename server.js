@@ -15,16 +15,58 @@ const db = mysql.createPool({
     connectionLimit: 10,
     queueLimit: 0
 });
+const db = mysql.createPool({
+    host: process.env.MYSQLHOST,
+    user: process.env.MYSQLUSER,
+    password: process.env.MYSQLPASSWORD,
+    database: process.env.MYSQLDATABASE,
+    port: process.env.MYSQLPORT,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+});
+
+const db = mysql.createPool({
+    host: process.env.MYSQLHOST,
+    user: process.env.MYSQLUSER,
+    password: process.env.MYSQLPASSWORD,
+    database: process.env.MYSQLDATABASE,
+    port: process.env.MYSQLPORT,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+});
+
+const db = mysql.createPool({
+    host: process.env.MYSQLHOST,
+    user: process.env.MYSQLUSER,
+    password: process.env.MYSQLPASSWORD,
+    database: process.env.MYSQLDATABASE,
+    port: process.env.MYSQLPORT,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+});
+
+const db = mysql.createPool({
+    host: process.env.MYSQLHOST,
+    user: process.env.MYSQLUSER,
+    password: process.env.MYSQLPASSWORD,
+    database: process.env.MYSQLDATABASE,
+    port: process.env.MYSQLPORT,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+});
+
 db.query("SELECT 1", (err) => {
     if (err) {
         console.log("MySQL connection failed!");
-        console.log(err.message);
+        console.log("ERROR:", err);
     } else {
         console.log("MySQL connected successfully!");
     }
 });
-
-
 // Function to send JSON
 function sendJSON(res, statusCode, data) {
 

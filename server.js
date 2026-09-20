@@ -4,7 +4,6 @@ const fs = require("fs");
 const path = require("path");
 const mysql = require("mysql2");
 
-// MySQL connection
 const db = mysql.createPool({
     host: process.env.MYSQLHOST || process.env.DB_HOST,
     user: process.env.MYSQLUSER || process.env.DB_USER,
@@ -16,10 +15,12 @@ const db = mysql.createPool({
     queueLimit: 0
 });
 
+
+
 db.query("SELECT 1", (err) => {
     if (err) {
         console.log("MySQL connection failed!");
-        console.log("ERROR:", err);
+        console.log(err.message);
     } else {
         console.log("MySQL connected successfully!");
     }
